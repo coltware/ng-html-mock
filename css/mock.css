@@ -1,0 +1,76 @@
+* {
+
+}
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.mock-header {
+    padding: 5px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.mock-footer {
+    position: fixed;
+    bottom: 0px;
+    height: 40px;
+    width: 100%;
+    padding: 5px;
+    background-color: #666;
+    color: #fff;
+    text-align: center;
+}
+.mock-footer h1{
+    margin: 0;
+    padding: 0;
+    line-height: 40px;
+}
+
+.mock-container {
+    position: relative;
+}
+
+.mock-main {
+    padding-left: 170px;
+}
+
+.mock-menu {
+    position: absolute;
+    left: 0;
+    top : 0;
+    width: 150px;
+}
+ul.mock-menu {
+    padding: 0;
+    margin: 0;
+}
+.mock-menu > li {
+    padding: 0.5em;
+    margin: 0;
+    list-style: none;
+    border-bottom: 1px solid #666;
+}
+
+.mock-form input {
+    font-size: 1.5em;
+    letter-spacing: 0.2em;
+}
+
+.mock-form button {
+    font-size: 1.5em;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    margin: 10px;
+}
+
+.mock-form label {
+    width: 150px;
+    display: inline-block;
+}
+.mock-form div.field{
+    padding: 5px;
+}

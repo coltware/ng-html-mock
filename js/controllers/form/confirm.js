@@ -1,0 +1,16 @@
+(function(module){
+    function FormConfirmController($scope,$http,$location){
+        console.log("confirm.....");
+        $http({
+            method: 'GET',
+            url: 'json/form.json'
+        }).then(function(response) {
+            $scope.form = response.data;
+        });
+
+        $scope.submit = function(){
+            $location.path("/form/done.html");
+        }
+    };
+    module.controller("FormConfirmController",FormConfirmController);
+}(module));

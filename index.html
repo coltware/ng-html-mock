@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="main">
+<head>
+    <meta charset="UTF-8">
+    <title>INCLUDE</title>
+    <script type="text/javascript" src="vendor/jquery/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="vendor/angularjs/angular.min.js"></script>
+    <script type="text/javascript" src="vendor/angularjs/angular-route.min.js"></script>
+    <script type="text/javascript" src="js/template.js"></script>
+    <link rel="stylesheet" href="css/mock.css">
+</head>
+<body>
+<div ng-include="'views/header.html'"></div>
+<div class="mock-container">
+    <div ng-include="'views/menu.html'"></div>
+    <div class="mock-main" ng-view></div>
+</div>
+<div ng-include="'views/footer.html'"></div>
+</body>
+<!-- ここにControllerを追加した場合には追記する -->
+<script type="text/javascript" src="js/controllers/cat1/page1.js"></script>
+<script type="text/javascript" src="js/controllers/form/index.js"></script>
+<script type="text/javascript" src="js/controllers/form/confirm.js"></script>
+</html>

@@ -10,3 +10,13 @@ module.config(function($routeProvider, $locationProvider){
         redirectTo: "/index.html"
     });
 });
+module.directive('mockHref',function() {
+    return {
+        scope : {
+            'href' : '@mockHref'
+        },
+        link: function ($scope, $element,$attrs) {
+            $element.attr("href","#" + $scope.href);
+        }
+    }
+});

@@ -2,11 +2,11 @@
 <html lang="ja" ng-app="main">
 <head>
     <meta charset="UTF-8">
-    <title>INCLUDE</title>
+    <title>HTML MOCK</title>
     <script type="text/javascript" src="vendor/jquery/jquery-2.2.1.min.js"></script>
     <script type="text/javascript" src="vendor/angularjs/angular.min.js"></script>
     <script type="text/javascript" src="vendor/angularjs/angular-route.min.js"></script>
-    <script type="text/javascript" src="js/template.js"></script>
+    <script type="text/javascript" src="js/spa.js"></script>
     <link rel="stylesheet" href="css/mock.css">
 </head>
 <body>
@@ -17,7 +17,9 @@
 </div>
 <div ng-include="'views/footer.html'"></div>
 </body>
-<!-- ここにControllerを追加した場合には追記する -->
+<!--
+    ここにControllerを追加した場合には追記する　（HTMLと同じファイルの命名規則のようにする)
+-->
 <script type="text/javascript" src="js/controllers/cat1/page1.js"></script>
 <script type="text/javascript" src="js/controllers/form/index.js"></script>
 <script type="text/javascript" src="js/controllers/form/confirm.js"></script>

@@ -1,6 +1,5 @@
 (function(module){
     function FormConfirmController($scope,$http,$location){
-        console.log("confirm.....");
         $http({
             method: 'GET',
             url: 'json/form.json'

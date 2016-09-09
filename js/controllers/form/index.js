@@ -13,13 +13,7 @@
                 return;
             }
 
-            $http({
-                method: 'GET',
-                url: 'json/form.json'
-            }).then(function(response) {
-                $scope.form = response.data;
-                $location.path("/form/confirm.html");
-            });
+            $location.path("/form/confirm.html");
         };
     };
     module.controller("FormController",FormController);

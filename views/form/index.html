@@ -1,21 +1,4 @@
 <div class="mock-form" ng-controller="FormController">
-    <p class="mock-message">
-        このサンプルはSPAでの動作の場合のみ正常に動作します。
-    </p>
     <h2>Form</h2>
-    <form novalidate name="form" method="post" ng-submit="confirm()">
-        <div ng-show="error">
-            <h5>Invalid Input</h5>
-        </div>
-
-        <div class="field">
-            <label>Name</label>
-            <input type="text" name="name" ng-model="name" required>
-        </div>
-        <div class="field">
-            <label>Email</label>
-            <input type="text" name="email" ng-model="email" required>
-        </div>
-        <button>SEND</button>
-    </form>
+    <div ng-include="'views/form/' + mode + '.html'"></div>
 </div>

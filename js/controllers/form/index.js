@@ -1,20 +1,36 @@
 (function(module){
-    function FormController($scope,$http,$location){
+    function FormController($scope,$http){
 
-        console.log("form.....");
+        $scope.mode = "edit";
 
-        $scope.confirm = function(){
-            console.log("submit",$scope.form);
+        $scope.confirm = function(form,model){
             $scope.error = false;
-
-            if($scope.form.$invalid){
-                console.log("submit",$scope.error);
+            if(form.$invalid){
                 $scope.error = true;
                 return;
             }
-
-            $location.path("/form/confirm.html");
+            $scope.model = model;
+            $scope.mode = 'confirm';
         };
+        $scope.submit = function () {
+
+            $http({
+                method: 'POST',
+                url: 'json/form_err.json',
+                data : $scope.model,
+            }).then(function(response) {
+                if(response.data){
+                    var status = response.data.status;
+                    if(status === 'ok'){
+                        $scope.mode = 'done';
+                    }
+                    else{
+                        $scope.mode = "edit";
+                        $scope.error = true;
+                    }
+                }
+            });
+        }
     };
     module.controller("FormController",FormController);
 }(module));

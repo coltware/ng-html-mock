@@ -1,15 +1,15 @@
-<div class="mock-form" ng-controller="FormConfirmController">
-    <h2>Form</h2>
-    <form novalidate name="form" ng-submit="submit()">
+<div>
+    <div ng-show="error">
+        <h5>Server Error</h5>
+    </div>
 
-        <div class="field">
-            <label>Name</label>
-            <span class="value">{{form.name}}</span>
-        </div>
-        <div class="field">
-            <label>Email</label>
-            <span class="value">{{form.email}}</span>
-        </div>
-        <button>SUBMIT</button>
-    </form>
+    <div class="field">
+        <label>Name</label>
+        <span class="value">{{model.name}}</span>
+    </div>
+    <div class="field">
+        <label>Email</label>
+        <span class="value">{{model.email}}</span>
+    </div>
+    <button ng-click="submit()">SUBMIT</button>
 </div>

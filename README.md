@@ -42,4 +42,17 @@ index.phpの実装は少々強引ではありますが、あえてわかりや�
 | views/footer.html | このデモテンプレートで使っているフッタ用ファイル |
 | views/mene.html | このデモテンプレートで使っているメニュー用のファイル |
 
+## ページを追加する場合 ##
+
+ページを追加する場合には、views/ 以下にHTMLファイルを追加してください。
+また、そのファイルにアクセスする場合には、SPAでの動作の場合には、index.html#以下にviews以下のフォルダ構成と同じようにアクセスする。
+たとえば、/views/form/index.htmlであれば、
+
+    http://......./index.html#/form/index.html
+   
+リンクを記述するときには、以下のようにする。
+    
+    <a mock-href=/form/index.html>フォーム</a>
+   
+ mock-hrefというのが気に入らなければ、js/spa.js内の"mockHref"を書き換える。
 
